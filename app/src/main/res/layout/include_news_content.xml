@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp">
+
+        <WebView
+            android:id="@+id/news_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/news_url"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/news_description"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="READ FULL ARTICLE"
+            android:textColor="@color/colorWhite"></TextView>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_url"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="@color/colorRipple"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <TextView
+                android:id="@+id/txt_comment_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
